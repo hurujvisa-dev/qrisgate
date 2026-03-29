@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.qrisauto">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:label="QRIS Auto"
+        android:allowBackup="true">
+
+        <service
+            android:name=".MyNotificationListener"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+
+        </service>
+
+    </application>
+</manifest>
